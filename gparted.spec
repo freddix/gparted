@@ -1,11 +1,11 @@
 Summary:	GNOME Partition Editor
 Name:		gparted
-Version:	0.16.0
+Version:	0.17.0
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	880e58673c9ef195181c0d721717a601
+# Source0-md5:	ecd66491bb2061c6aa6077cc24823b9e
 Source1:	org.freddix.pkexec.gparted.policy
 Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
