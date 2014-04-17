@@ -1,11 +1,11 @@
 Summary:	GNOME Partition Editor
 Name:		gparted
-Version:	0.17.0
+Version:	0.18.0
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	ecd66491bb2061c6aa6077cc24823b9e
+# Source0-md5:	c4c928de08519c923abaa5a099881241
 Source1:	org.freddix.pkexec.gparted.policy
 Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
@@ -36,7 +36,6 @@ and copying of partitions.
 %{__rm} %{name}.desktop
 
 %build
-%{__gnome_doc_prepare}
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
@@ -58,9 +57,6 @@ cat > $RPM_BUILD_ROOT%{_bindir}/gparted-pkexec <<EOF
 pkexec /usr/sbin/gparted $@
 
 EOF
-
-# not required
-rm -rf $RPM_BUILD_ROOT%{_includedir}/GParted
 
 %find_lang %{name} --with-gnome --with-omf
 
